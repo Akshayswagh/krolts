@@ -1,0 +1,797 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Krolts</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	
+	<link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
+    <style>
+        /* hot plix */
+
+.navbar {
+            display: flex;
+            align-items:center;
+            background-color: #001b44;
+            padding: 5px;
+            flex-wrap: wrap;
+            justify-items: center;
+        }
+
+        .navbar-brand {
+            flex: 1;
+            text-align:center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 5rem;
+        }
+
+        .hotline-container {
+            display: flex;
+            justify-content:end;
+            gap: 5px;
+            flex: 1;
+            flex-wrap: wrap;
+            background-color: #001b44;
+        }
+
+        .hotline-box {
+            flex: 1;
+            max-width: 97px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        
+        }
+
+        .hotline-box:hover {
+            transform: scale(1.05);
+        }
+
+        .hotline-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .hotline-box p {
+            margin: 2px;
+        padding: 1px;        }
+
+        .hotline-box a {
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .hotline-box a:hover {
+            text-decoration: underline;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+
+        .social-box {
+            flex: 1;
+            max-width: 150px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        }
+
+        .social-box:hover {
+            transform: scale(1.05);
+        }
+
+        .social-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .social-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .hotline-container, .social-container {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hotline-box, .social-box {
+                max-width: 120px;
+                font-size: 10px;
+            }
+        }
+        .element.style {
+    background-color: #001b44;
+    visibility: visible;
+    animation-delay: 0.1s;
+    animation-name: fadeIn;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+       <!-- <div class="container-fluid bg-dark px-0"> -->
+		<!-- <div> -->
+                    <!-- <a href="index.html"> -->
+                    <!-- <img src="img/logo.jpg" class="img-responsive" /> -->
+                        <!-- </a> -->
+                <!-- </div> -->
+            <!-- <div class="row gx-0">
+               <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="index.html"  class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center" >
+<h1 class="m-0  text-uppercase" style="color:white;">KROLTS</h1>                    <p style="color: aliceblue; margin-bottom: initial; font-size: inherit;">GPT SOFTWARE</p> -->
+
+                        <!-- <h1 class="m-0 text-primary text-uppercase" style="font-size: unset;">GPT Software</h1> -->
+                    <!-- </a>
+                </div>
+                <div class="col-lg-9">
+                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                         <div class="col-lg-7 px-5 text-start">
+                             <div class="h-100 d-inline-flex align-items-center py-2 me-4"> -->
+                                <!-- <i class="fa fa-envelope text-primary me-2"></i> -->
+                                <!-- <p class="mb-0" style="color:black;">Sales Hotline:- +91 8668782878</p>
+								
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2">
+                                <i class="fa fa-phone text-primary me-2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24/7</i>
+                                <p class="mb-0"  style="color:black;">+91 8010732929 </p>
+                            </div>
+                        </div>
+ <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center py-2">
+                                <a class="me-3" href="https://www.facebook.com/share/15gdKHQect/"><i class="fab fa-facebook-f"></i></a>
+                               
+                                <a class="me-3" href="https://www.linkedin.com/in/krolts-elevatorsco-9313312b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href="https://www.instagram.com/kroltsindiaofficial?igsh=MXM2c29vZnM4d3Uxag=="><i class="fab fa-instagram"></i></a>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                         <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h6 class="text-start  text-uppercase mb-4" style="color:white;">Krolts</h6>
+
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse" style="margin-left:25px;">
+                           <div class="navbar-nav mr-auto py-0">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="about.html" class="nav-item nav-link">About Us</a>
+                                <a href="service.html" class="nav-item nav-link"> Our Services</a>
+                                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+								<a href="client.html" class="nav-item nav-link">Clients</a>
+								<a href="testimonial.html" class="nav-item nav-link">Testimonial</a> -->
+                                
+                                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLScUuUf66y_bqq4bCBH8kwRT_mLOjIzQpoV9WWmfPmtNI4NVsw/viewform?usp=header" class="nav-item nav-link">Request call back</a>
+                            </div>
+						<div></div>  -->
+                     <!-- <a href="index.html"> -->
+                    <!-- <img src="img/Gt.png" class="img-responsive" style="padding: 0px 7px -3px 0px; height:90px;"> -->
+                       
+                <!-- </div> -->
+				 <!-- </a> -->
+                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                        <!-- </div>
+                    </nav>
+                </div>
+            </div>
+        </div> -->
+
+        <!--  new nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0" >
+            <!-- <h1><a href="index.html" class="navbar-brand  ">KROLTS</a></h1> -->
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+                
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse" style="margin-left:4rem;">
+                <!-- <h1><a href="index.html" class="navbar-brand justify-content-center">KROLTS</a></h1> -->
+                <!-- <h1><a href="index.html" class="navbar-brand m-0">KROLTS</a></h1> -->
+                <div class="navbar-nav mr-auto py-0 ">
+                    <h1 ><a href="index.html" class="navbar-brand ">KROLTS</a></h1>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="service.html" class="nav-item nav-link">Our Services</a>
+                                        <a href="projects.html" class="nav-item nav-link">Projects</a>
+
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="client.html" class="nav-item nav-link">Clients</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScUuUf66y_bqq4bCBH8kwRT_mLOjIzQpoV9WWmfPmtNI4NVsw/viewform?usp=header" class="nav-item nav-link">Request Call Back</a> -->
+                   
+                </div>
+                <div class="hotline-box d-flex text-center ">
+                    <div>
+                    <a href="tel:+918668782878">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Sales Hotline</p>
+                        <p>+91 8668782878</p>
+                    </a>  
+                    </div>
+                    
+            </div>
+            <div>
+                <div class="hotline-box d-flex text-center m-3" >
+                <a href="tel:+918010732929">
+                    <i class="fas fa-phone-volume"></i>
+                    <p>24/7 Hotline</p>
+                    <p>+91 8010732929</p>
+                </a>
+            </div>
+            </div>
+        </nav>
+        <!-- Header End -->
+
+
+        <!-- Page Header Start text-white -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/Gallery/elevator.jpg);  ">
+            <div class="container-fluid  py-5" >
+                <div class="container text-center pb-5 ">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown ">ABOUT US</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:white;">Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="#"></a></li> -->
+                            <li class="breadcrumb-item text-white active" aria-current="page">About</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+        <!-- Booking Start -->
+      <!--  <div class="container-fluid booking pb-5 wow fadeIn" data-wow-delay="0.1s">
+            <div class="container">
+                <div class="bg-white shadow" style="padding: 35px;">
+                    <div class="row g-2">
+                        <div class="col-md-10">
+                            <div class="row g-2">
+                                <div class="col-md-3">
+                                    <div class="date" id="date1" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input"
+                                            placeholder="Check in" data-target="#date1" data-toggle="datetimepicker" />
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <div class="date" id="date2" data-target-input="nearest">
+                                        <input type="text" class="form-control datetimepicker-input" placeholder="Check out" data-target="#date2" data-toggle="datetimepicker"/>
+                                    </div>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option selected>Adult</option>
+                                        <option value="1">Adult 1</option>
+                                        <option value="2">Adult 2</option>
+                                        <option value="3">Adult 3</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-3">
+                                    <select class="form-select">
+                                        <option selected>Child</option>
+                                        <option value="1">Child 1</option>
+                                        <option value="2">Child 2</option>
+                                        <option value="3">Child 3</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2">
+                            <button class="btn btn-primary w-100">Submit</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>-->
+        <!-- Booking End -->
+
+
+    
+        <!-- About Start -->
+     <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- <h6 class="section-title text-start text-primary text-uppercase">About Us</h6> -->
+                      <h1 class="mb-4" style="font-size:x-large; ;">Welcome to <span class="text-primary text-uppercase ">Krolts</span></h1>
+						  <h6 class="section-title text-start text-primary text-uppercase">Who we are</h6>
+                       <p class="mb-4" style="text-align:justify; color:black;">Krolts Elevators & Escalators is also specialized in providing technological 
+upgrades and modernization services to lifts and escalators that have passed their 
+prime. From residential and corporate buildings to hospitals or shopping 
+complexes, lifts and elevators have become a part and parcel of our daily life. At 
+Krolts Elevators & Escalators, we look after the maintenance and modernization 
+of these vertical mobility solutions to ensure uninterrupted service and complete 
+safety of users. </p>
+							  <p class="mb-4" style="text-align:justify;color:black;">With experienced professionals in our team, we have the expertise to provide the 
+best service to our clients, which makes us a formidable name in this field. We are 
+associated with several technical partnerships with foreign brands across 
+Germany, Italy, Greece, and the UK. 
+						  <h6 class="section-title text-start text-primary text-uppercase">Join Krolts </h6>
+ <p class="mb-4" style="text-align:justify; color:black;">Become krolts premium member and explore service benefits </p>
+.</p>
+
+					
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="contact.html">Contact Us</a>
+
+                    </div>
+					
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/About/1.jpeg" style="margin-top: 25%;"> -->
+                            </div>
+                            <div class="col-12	 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/About/map.png">
+                            </div>
+                            <!-- <div class="col-6 text-end"> -->
+                                <!-- <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/SUKNYA BESAN  FINAL CDR-1.jpg"> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-6 text-start"> -->
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/333 (2).jpg"> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+        <!-- About End -->
+
+		 <!-- <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s"> -->
+            <!-- <div class="row g-0"> -->
+                
+                <!-- <div class="col-md-12"> -->
+                    <!-- <div class=""> -->
+			<!-- <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/trade.png" style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;"> -->
+
+                            <!-- <span></span> -->
+                        <!-- </button> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- Director-->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Director</h6>
+                    <h1 class="mb-5"> <span class="text-primary text-uppercase"></span></h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                       
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a>
+                                     <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->  
+                                    <!--  <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->  
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0"><br>Mahesh Gejage</h5>
+								<br>
+                                <small>Founder & CEO</small>
+								<br>
+								<br>
+								
+							
+<p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <!--  <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a> -->  
+                                    <!--  <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->  
+                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> --> 
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+							<br>
+							
+                                <h5 class="fw-bold mb-0"> Varsha Shitole</h5>
+								<br>
+                                <small>Director & Management </small>
+								<br>
+								<br>
+								<p></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Team End -->
+		
+
+		
+
+        <!-- Interior-->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s"> -->
+                    <!-- <h6 class="section-title text-center text-primary text-uppercase">Interior Designer</h6> -->
+                    <!-- <h1 class="mb-5"> <span class="text-primary text-uppercase"></span></h1> -->
+                <!-- </div> -->
+                <div class="row g-4">
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
+                       
+                    </div>
+                    <!-- <div class="col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inter-1.jpeg" alt=""> -->
+                                <!-- <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center"> -->
+                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-facebook-f"></i></a> -->
+                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-twitter"></i></a> -->
+                                    <!-- <a class="btn btn-square btn-primary mx-1" href=""><i class="fab fa-instagram"></i></a> -->
+                                <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Swapnali Patil</h5> -->
+                                <!-- <small>Interior Designer</small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                   
+                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Interior -->
+
+		<!-- Team Start -->
+        <!-- <div class="container-xxl py-5"> -->
+            <!-- <div class="container"> -->
+                <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s"> -->
+                    <!-- <h6 class="section-title text-center text-primary text-uppercase">Our Team</h6> -->
+                    <!-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Team</span></h1> -->
+                <!-- </div> -->
+                <!-- <div class="row g-4"> -->
+                   <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-1.jpg" alt=""> -->
+                               
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Interior Designers</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-2.jpg" alt=""> -->
+                               
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">2D Designers</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/product.jpg" alt=""> -->
+                               
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">3D Designers</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                    <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-4.jpg" alt=""> -->
+                                
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Consulting </h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+				
+					 <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-5.jpg" alt=""> -->
+                              
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Civil Engineer</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-6.jpeg" alt=""> -->
+                                
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Architect</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+					
+					<!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-7.png" alt=""> -->
+                                
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Advocate</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+						<!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        <!-- <div class="rounded shadow overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/inte-8.jpg" alt=""> -->
+                                
+                            <!-- </div> -->
+                            <!-- <div class="text-center p-4 mt-3"> -->
+                                <!-- <h5 class="fw-bold mb-0">Painting</h5> -->
+                                <!-- <small></small> -->
+                            <!-- </div> -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- Team End -->
+
+
+		<!-- Newsletter Start -->
+        <!-- <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s"> -->
+            <!-- <div class="row justify-content-center"> -->
+                <!-- <div class="col-lg-10 border rounded p-1"> -->
+                    <!-- <div class="border rounded text-center p-1"> -->
+                        <!-- <div class="bg-white rounded text-center p-5"> -->
+						
+					
+							<!-- <form action="mailto:adiflexmultipackaging@gmail.com" method="post" enctype="text/plain"><br> -->
+                            <!-- <h4 class="mb-4"> <span class="text-primary text-uppercase">Email Us </span></h4> -->
+                            <!-- <div class="position-relative mx-auto" style="max-width: 400px;">  -->
+                                <!-- <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email " name="email"> -->
+								 <!-- <input class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" type="submit" value="Submit"> -->
+                                <!--  <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" type="submit" value="send">Submit</button> -->
+                            <!-- </div> -->
+							<!-- </form>  -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- Newsletter Start -->
+        
+     
+        <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s" style="background-color:#001b44">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3" style="font-size:large;">ADDRESS </h1></a>
+                            <!-- <p class="text-white mb-0" style="text-align:justify;">We believe it is our core values that has made us a reputable name in the industry 
+and among our clients. For any project that comes, all our operations fall in line with 
+the below principles.
+							<a class="text-dark fw-medium" href="index.html"></a>.
+							</p>
+                            <br> -->
+                            <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. 
+                                KS bakers, Near KPBS Bus Stop. 
+                                Bhagya Nagar Colony, 
+                                Kukutpally, Hyderabad, 500072 
+                                +91 902-1017272 | +91 
+                                9090578963 </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h7 class=" text-start  text-uppercase mb-4">Contact</h7>
+                        <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Corporate Office :-611, 2nd Cross Rd, 3rd Block, 
+Koramangala, 
+Bengaluru, 560034 
++91 8668-782878 |+91 
+9096578963 </p><br>
+						<!-- <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. 
+KS bakers, Near KPBS Bus Stop. 
+Bhagya Nagar Colony, 
+Kukutpally, Hyderabad, 500072 
++91 902-1017272 | +91 
+9090578963 </p><br> -->
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Sales.krolts@gmail.com </p>
+
+
+                        <p class="mb-2"><i class="fa fa-phone me-3"></i>+91 8668782878  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8010732929</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+					
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h7 class=" text-start  text-uppercase mb-4">Company</h7>
+								<a class="btn btn-link" href="index.html">Home</a>
+                                <a class="btn btn-link" href="about.html">About Us</a>
+								<a class="btn btn-link" href="service.html">Service</a>
+								<a class="btn btn-link" href="gallery.html">Gallery</a>
+								<a class="btn btn-link" href="testimonial.html">Testimonial</a>
+                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                               
+                            </div>
+                            <div class="col-md-6">
+                                <h7 class=" text-start  text-uppercase mb-4">Services</h7>
+                                <a class="btn btn-link" href="">Installation of New Lifts 
+</a>
+                                <a class="btn btn-link" href="">Maintenance of Existing Lifts 
+</a>
+                                <a class="btn btn-link" href="">Modernization of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Repair of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Consultation for Elevator Installation 
+</a>
+								<a class="btn btn-link" href="">Earthing Material</a>
+
+                            </div>
+							
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <a class="border-bottom" href="#"></a>All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="" href="https://www.gptsoftwares.in/index.html">GPT SOFTWARE</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="./index.html">Home</a>
+                                <a href="./about.html">About</a>
+                                <a href="./contact.html">Contact</a>
+                                <a href="./gallery.html">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <a href="https://api.whatsapp.com/send/?phone=+9195959 78111&text=want+to+know+more about+us&type=phone_number&app_absent=0" class="float" target="_blank"> -->
+<!-- <i class="fa fa-whatsapp my-float"></i> -->
+<!-- </a> -->
+
+							</div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+       <a href="#" id="scroll-to-top" class="dmtop global-radius show" style="bottom: 10px;"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

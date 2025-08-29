@@ -1,0 +1,663 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+<title>Our Projects - Krolts</title>    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+	     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
+
+</head>
+<style>
+    /* hot plix */
+
+.navbar {
+        display: flex;
+        align-items:center;
+        background-color: #001b44;
+        padding: 5px;
+        flex-wrap: wrap;
+        justify-items: center;
+    }
+
+    .navbar-brand {
+        flex: 1;
+            text-align:center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 5rem;
+    }
+
+    .hotline-container {
+        display: flex;
+        justify-content:end;
+        gap: 5px;
+        flex: 1;
+        flex-wrap: wrap;
+    }
+
+    .hotline-box {
+        flex: 1;
+        max-width: 97px;
+        background-color: #001b44;
+        border: 1px solid #ffffff;
+        color: white;
+        text-align: center;
+        padding: 6px;
+        font-family: Arial, sans-serif;
+        border-radius: 5px;
+        transition: transform 0.2s;
+        font-size: 11px;
+    
+    }
+
+    .hotline-box:hover {
+        transform: scale(1.05);
+    }
+
+    .hotline-box i {
+        font-size: 14px;
+        margin-bottom: 3px;
+        display: block;
+    }
+
+    .hotline-box p {
+        margin: 2px;
+    padding: 1px;        }
+
+    .hotline-box a {
+        color: white;
+        text-decoration: none;
+        
+    }
+
+    .hotline-box a:hover {
+        text-decoration: underline;
+    }
+
+    .social-container {
+        display: flex;
+        justify-content: space-between;
+        gap: 5px;
+        flex: 2;
+        flex-wrap: wrap;
+    }
+
+    .social-box {
+        flex: 1;
+        max-width: 150px;
+        background-color: #001b44;
+        border: 1px solid #ffffff;
+        color: white;
+        text-align: center;
+        padding: 6px;
+        font-family: Arial, sans-serif;
+        border-radius: 5px;
+        transition: transform 0.2s;
+        font-size: 11px;
+    }
+
+    .social-box:hover {
+        transform: scale(1.05);
+    }
+
+    .social-box i {
+        font-size: 14px;
+        margin-bottom: 3px;
+        display: block;
+    }
+
+    .social-box a {
+        color: white;
+        text-decoration: none;
+    }
+
+    .social-box a:hover {
+        text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+        .navbar {
+            flex-direction: column;
+        }
+
+        .hotline-container, .social-container {
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .hotline-box, .social-box {
+            max-width: 120px;
+            font-size: 10px;
+        }
+    }
+
+</style>
+<style>
+            /* Base styles matching Krolts theme */
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+        }
+        
+        .projects-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+        
+        .page-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin: 60px 0 40px;
+            font-size: 2rem;
+            font-weight: 600;
+            color: #1a1a1a;
+            position: relative;
+        }
+        
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: #d4af37;
+            margin: 15px auto;
+        }
+        
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 30px;
+        }
+        
+        .project-card {
+            background: #fff;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        
+        .project-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .project-info {
+            padding: 20px;
+        }
+        
+        .project-name {
+            font-size: 1.2rem;
+            font-weight: 600;
+            margin: 0 0 10px 0;
+            color: #222;
+        }
+        
+        .project-location {
+            color: #666;
+            font-size: 0.95rem;
+            margin: 0;
+        }
+        
+        /* Additional Images Section */
+        .additional-images {
+            background: #fff;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            margin-top: 40px;
+        }
+        
+        .images-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+        
+        .image-item {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+        
+        .image-item img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            display: block;
+        }
+        
+        .image-caption {
+            padding: 12px;
+            background: #f8f9fa;
+            font-size: 0.85rem;
+            color: #555;
+            text-align: center;
+        }
+        
+        @media (max-width: 768px) {
+            .projects-grid, .images-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .page-title {
+                font-size: 2rem;
+            }
+            
+            .section-title {
+                font-size: 1.75rem;
+            }
+            
+            .additional-images {
+                padding: 20px;
+            }
+        }
+</style>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+
+        <!-- new nav  -->
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0" style="background-color: #001b44;">
+            <!-- <h1><a href="index.html" class="navbar-brand  ">KROLTS</a></h1> -->
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse"style="margin-left:4rem;">
+                <!-- <h1><a href="index.html" class="navbar-brand justify-content-center">KROLTS</a></h1> -->
+                <div class="navbar-nav mr-auto py-0">
+                    <h1><a href="index.html" class="navbar-brand ">KROLTS</a></h1>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="service.html" class="nav-item nav-link">Our Services</a>
+                    <a href="projects.html" class="nav-item nav-link">Projects</a>
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="client.html" class="nav-item nav-link">Clients</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                   
+                </div>
+                <div class="hotline-box d-flex text-center ">
+                    <div>
+                    <a href="tel:+918668782878">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Sales Hotline</p>
+                        <p>+91 8668782878</p>
+                    </a>  
+                    </div>
+                    
+            </div>
+            <div>
+                <div class="hotline-box d-flex text-center m-3" >
+                <a href="tel:+918010732929">
+                    <i class="fas fa-phone-volume"></i>
+                    <p>24/7 Hotline</p>
+                    <p>+91 8010732929</p>
+                </a>
+            </div>
+            </div>
+        </nav>
+        <!-- Header End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/Gallery/elevator.jpg);">
+
+            <div class="container-fluid  py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white mb-3 animated slideInDown">Projects</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:white;">Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                            <li class="breadcrumb-item text-white active" aria-current="page">Projects</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+     
+		<main class="projects-container">
+        <h1 class="page-title">Our Projects</h1>
+        
+        <div class="projects-grid">
+            <!-- Project 1 -->
+            <div class="project-card">
+                <img src="img/projects/Purva Hill Park .jpg" alt="Purva Hill Park, Sarjapura, Bangalore" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Purva Hill Park</h3>
+                    <p class="project-location">Sarjapura, Bangalore</p>
+                </div>
+            </div>
+            
+            <!-- Project 2 -->
+            <div class="project-card">
+                <img src="img/projects/Gopalan Pushpanjali.jpg" alt="Gopalan Pushpanjali, Chamrajpeth Bangalore" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Gopalan Pushpanjali</h3>
+                    <p class="project-location">Chamrajpeth, Bangalore</p>
+                </div>
+            </div>
+            
+            <!-- Project 3 -->
+            <div class="project-card">
+                <img src="img/projects/Palm Acre Society.jpg" alt="Palm Acre Society, Mulud East" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Palm Acre Society</h3>
+                    <p class="project-location">Mulud East</p>
+                </div>
+            </div>
+            
+            <!-- Project 4 -->
+            <div class="project-card">
+                <img src="img/projects/Shanti .jpg" alt="Shanti C.H.S Chembur" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Shanti C.H.S</h3>
+                    <p class="project-location">Chembur</p>
+                </div>
+            </div>
+            
+            <!-- Project 5 -->
+            <div class="project-card">
+                <img src="img/projects/Shantiban Apartment.jpg" alt="Shantiban Apartment, Gangadham, Pune" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Shantiban Apartment</h3>
+                    <p class="project-location">Gangadham, Pune</p>
+                </div>
+            </div>
+            
+            <!-- Project 6 -->
+            <div class="project-card">
+                <img src="img/projects/Runwal Seagull.jpg" alt="Runwal Seagull, Hadapsar" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">Runwal Seagull</h3>
+                    <p class="project-location">Hadapsar</p>
+                </div>
+            </div>
+            
+            <!-- Project 7 -->
+            <div class="project-card">
+                <img src="img/projects/DSK Vishwa .jpg" alt="DSK Vishwa, Dhayari" class="project-image">
+                <div class="project-info">
+                    <h3 class="project-name">DSK Vishwa</h3>
+                    <p class="project-location">Dhayari</p>
+                </div>
+            </div>
+        </div>
+        <!-- Additional Images Section -->
+        <h2 class="section-title">Additional Images</h2>
+        
+        <div class="additional-images">
+            <div class="images-grid">
+
+
+
+                 <div class="image-item">
+                    <img src="img/additional/10.jpg" alt="S.S.P.M. Jaywant College of Engineering & Polytechnic">
+                    <div class="image-caption"></div>
+                </div> <div class="image-item">
+                    <img src="img/additional/11.jpg" alt="S.S.P.M. Jaywant College of Engineering & Polytechnic">
+                    <div class="image-caption"></div>
+                </div> <div class="image-item">
+                    <img src="img/additional/12.jpg" alt="S.S.P.M. Jaywant College of Engineering & Polytechnic">
+                    <div class="image-caption"></div>
+                </div>
+
+
+                <!-- Image 1 -->
+                <div class="image-item">
+                    <img src="img/additional/9.jpg" alt="S.S.P.M. Jaywant College of Engineering & Polytechnic">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 2 -->
+                <div class="image-item">
+                    <img src="img/additional/7.jpg" alt="S.S.P.M. Taywant College of Engineering">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 3 -->
+                <div class="image-item">
+                    <img src="img/additional/6.jpg" alt="vivo V29e - Pune">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 4 -->
+                <div class="image-item">
+                    <img src="img/additional/5.jpg" alt="vivo v29e - Pune">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 5 -->
+                <div class="image-item">
+                    <img src="img/additional/4.jpg" alt="vivo V296 - Pune">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 6 -->
+                <div class="image-item">
+                    <img src="img/additional/3.jpg" alt="Vivo V2Ps">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 7 -->
+                <div class="image-item">
+                    <img src="img/additional/2.jpg" alt="Moltes Hora Private Limited">
+                    <div class="image-caption"></div>
+                </div>
+                
+                <!-- Image 8 -->
+                <div class="image-item">
+                    <img src="img/additional/1.jpg" alt="vivo V29e - Pune">
+                    <div class="image-caption"></div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	
+    
+        
+   
+         <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s" style="background-color:#001b44">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3" style="font-size:large;">ADDRESS</h1></a>
+                            <!-- <p class="text-white mb-0" style="text-align:justify;">We believe it is our core values that has made us a reputable name in the industry 
+and among our clients. For any project that comes, all our operations fall in line with 
+the below principles.
+							<a class="text-dark fw-medium" href="index.html"></a>.
+							</p><br> -->
+                            <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. 
+                                KS bakers, Near KPBS Bus Stop. 
+                                Bhagya Nagar Colony, 
+                                Kukutpally, Hyderabad, 500072 
+                                +91 902-1017272 | +91 
+                                9090578963 </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h7 class=" text-start  text-uppercase mb-4">Contact</h7>
+                        <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Corporate Office :-611, 2nd Cross Rd, 3rd Block, 
+Koramangala, 
+Bengaluru, 560034 
++91 8668-782878 |+91 
+9096578963 </p><br>
+						<!-- <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. 
+KS bakers, Near KPBS Bus Stop. 
+Bhagya Nagar Colony, 
+Kukutpally, Hyderabad, 500072 
++91 902-1017272 | +91 
+9090578963 </p><br> -->
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Sales.krolts@gmail.com </p>
+
+
+                        <p class="mb-2"><i class="fa fa-phone me-3"></i>+91 8668782878  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8010732929</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+					
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h7 class="title text-start  text-uppercase mb-4">Company</h7>
+								<a class="btn btn-link" href="index.html">Home</a>
+                                <a class="btn btn-link" href="about.html">About Us</a>
+								<a class="btn btn-link" href="service.html">Service</a>
+								<a class="btn btn-link" href="gallery.html">Gallery</a>
+								<a class="btn btn-link" href="testimonial.html">Testimonial</a>
+                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                               
+                            </div>
+                            <div class="col-md-6">
+                                <h7 class="   text-uppercase mb-4">Services</h7>
+                                <a class="btn btn-link" href="">Installation of New Lifts 
+</a>
+                                <a class="btn btn-link" href="">Maintenance of Existing Lifts 
+</a>
+                                <a class="btn btn-link" href="">Modernization of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Repair of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Consultation for Elevator Installation 
+</a>
+								<a class="btn btn-link" href="">Earthing Material</a>
+
+                            </div>
+							
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <a class="border-bottom" href="#"></a>All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="" href="https://www.gptsoftwares.in/index.html">GPT SOFTWARE</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="./index.html">Home</a>
+                                <a href="./about.html">About</a>
+                                <a href="./contact.html">Contact</a>
+                                <a href="./gallery.html">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <a href="https://api.whatsapp.com/send/?phone=+9195959 78111&text=want+to+know+more about+us&type=phone_number&app_absent=0" class="float" target="_blank"> -->
+<!-- <i class="fa fa-whatsapp my-float"></i> -->
+<!-- </a> -->
+
+							</div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+       <a href="#" id="scroll-to-top" class="dmtop global-radius show" style="bottom: 10px;"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

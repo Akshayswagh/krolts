@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Krolts</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
+     <style>
+        /* hot plix */
+
+.navbar {
+            display: flex;
+            align-items:center;
+            background-color: #001b44;
+            padding: 5px;
+            flex-wrap: wrap;
+            justify-items: center;
+        }
+
+        .navbar-brand {
+            flex: 1;
+            text-align:center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 5rem;
+        }
+
+        .hotline-container {
+            display: flex;
+            justify-content:end;
+            gap: 5px;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .hotline-box {
+            flex: 1;
+            max-width: 97px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        
+        }
+
+        .hotline-box:hover {
+            transform: scale(1.05);
+        }
+
+        .hotline-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .hotline-box p {
+            margin: 2px;
+        padding: 1px;        }
+
+        .hotline-box a {
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .hotline-box a:hover {
+            text-decoration: underline;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+
+        .social-box {
+            flex: 1;
+            max-width: 150px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        }
+
+        .social-box:hover {
+            transform: scale(1.05);
+        }
+
+        .social-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .social-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .hotline-container, .social-container {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hotline-box, .social-box {
+                max-width: 120px;
+                font-size: 10px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+       <!-- <div class="container-fluid bg-dark px-0"> -->
+		<!-- <div> -->
+                    <!-- <a href="index.html"> -->
+                    <!-- <img src="img/logo.jpg" class="img-responsive" /> -->
+                        <!-- </a> -->
+                <!-- </div> -->
+            <!-- <div class="row gx-0">
+               <div class="col-lg-3 bg-dark d-none d-lg-block">
+                    <a href="index.html"  class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center" >
+<h1 class="m-0  text-uppercase" style="color:white;">KROLTS</h1>                    <p style="color: aliceblue; margin-bottom: initial; font-size: inherit;">GPT SOFTWARE</p> -->
+
+                        <!-- <h1 class="m-0 text-primary text-uppercase" style="font-size: unset;">GPT Software</h1> -->
+                    </a>
+                <!-- </div>
+                <div class="col-lg-9">
+                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                         <div class="col-lg-7 px-5 text-start">
+                             <div class="h-100 d-inline-flex align-items-center py-2 me-4"> -->
+                                <!-- <i class="fa fa-envelope text-primary me-2"></i> -->
+                                <!-- <p class="mb-0" style="color:black;">Sales Hotline:- +91 8668782878</p>
+								
+                            </div>
+                            <div class="h-100 d-inline-flex align-items-center py-2">
+                                <i class="fa fa-phone text-primary me-2" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;24/7</i>
+                                <p class="mb-0"  style="color:black;">+91 8010732929 </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-5 px-5 text-end">
+                            <div class="d-inline-flex align-items-center py-2">
+                                <a class="me-3" href="https://www.facebook.com/share/15gdKHQect/"><i class="fab fa-facebook-f"></i></a>
+                               
+                                <a class="me-3" href="https://www.linkedin.com/in/krolts-elevatorsco-9313312b8?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app"><i class="fab fa-linkedin-in"></i></a>
+                                <a class="me-3" href="https://www.instagram.com/kroltsindiaofficial?igsh=MXM2c29vZnM4d3Uxag=="><i class="fab fa-instagram"></i></a>
+                              
+                            </div>
+                        </div>
+                    </div>
+                    <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
+                       <a href="index.html" class="navbar-brand d-block d-lg-none">
+                        <h6 class="text-start  text-uppercase mb-4" style="color:white;">Krolts</h6>
+
+                        </a>
+                        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="navbar-toggler-icon"></span>
+                        </button>
+                        <div class="collapse navbar-collapse justify-content-between" id="navbarCollapse" style="margin-left:25px;">
+                           <div class="navbar-nav mr-auto py-0">
+                                <a href="index.html" class="nav-item nav-link active">Home</a>
+                                <a href="about.html" class="nav-item nav-link">About Us</a>
+                                <a href="service.html" class="nav-item nav-link"> Our Services</a>
+                                <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+								<a href="client.html" class="nav-item nav-link">Clients</a>
+								<! <a href="testimonial.html" class="nav-item nav-link">Testimonial</a> -->
+                                
+                                <!-- <a href="contact.html" class="nav-item nav-link">Contact</a>
+								<a href="https://docs.google.com/forms/d/e/1FAIpQLScUuUf66y_bqq4bCBH8kwRT_mLOjIzQpoV9WWmfPmtNI4NVsw/viewform?usp=header" class="nav-item nav-link">Request call back</a>
+                            </div>
+						<div --> 
+                     <!-- <a href="index.html"> -->
+                    <!-- <img src="img/Gt.png" class="img-responsive" style="padding: 0px 7px -3px 0px; height:90px;"> -->
+                       
+                <!-- </div> -->
+				 <!-- </a> -->
+                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                        <!-- </div>
+                    </nav>
+                </div>
+            </div>
+        </div> -->
+
+        <!--  new nav  -->
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0" style="background-color: #001b44;">
+            <!-- <h1><a href="index.html" class="navbar-brand  ">KROLTS</a></h1> -->
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse" style="margin-left:4rem;">
+                <!-- <h1><a href="index.html" class="navbar-brand justify-content-center">KROLTS</a></h1> -->
+                <div class="navbar-nav mr-auto py-0">
+                    <h1><a href="index.html" class="navbar-brand ">KROLTS</a></h1>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="service.html" class="nav-item nav-link">Our Services</a>
+                                        <a href="projects.html" class="nav-item nav-link">Projects</a>
+
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="client.html" class="nav-item nav-link">Clients</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScUuUf66y_bqq4bCBH8kwRT_mLOjIzQpoV9WWmfPmtNI4NVsw/viewform?usp=header" class="nav-item nav-link">Request Call Back</a> -->
+                   
+                </div>
+                <div class="hotline-box d-flex text-center ">
+                    <div>
+                    <a href="tel:+918668782878">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Sales Hotline</p>
+                        <p>+91 8668782878</p>
+                    </a>  
+                    </div>
+                    
+            </div>
+            <div>
+                <div class="hotline-box d-flex text-center m-3" >
+                <a href="tel:+918010732929">
+                    <i class="fas fa-phone-volume"></i>
+                    <p>24/7 Hotline</p>
+                    <p>+91 8010732929</p>
+                </a>
+            </div>
+            </div>
+        </nav>
+        <!-- Header End -->
+
+
+        <!-- Page Header Start -->
+        <div class="container-fluid page-header mb-5 p-0" style="background-image: url(img/Gallery/elevator.jpg);">
+
+            <div class="container-fluid  py-5 py-5">
+                <div class="container text-center pb-5">
+                    <h1 class="display-3 text-white   mb-3 animated slideInDown">GALLERY</h1>
+                    <nav aria-label="breadcrumb">
+                        <ol class="breadcrumb justify-content-center text-uppercase">
+                            <li class="breadcrumb-item"><a href="index.html" style="color:white;">Home</a></li>
+                            <!-- <li class="breadcrumb-item"><a href="#">Pages</a></li> -->
+                            <li class="breadcrumb-item text-white active" aria-current="page">Gallery</li>
+                        </ol>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Page Header End -->
+
+
+      
+		<!-- service Start -->
+         <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s" style="margin-bottom: 26px;">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Installation Gallery</h6>
+                    <!-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Gallery</span></h1> -->
+                </div>
+                <div class="row g-4">
+
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-22.jpeg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-23.jpeg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-24.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+			<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-1.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-2.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-3.jpg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-4.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-5.jpeg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-6.png" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-14.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-8.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-9.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-10.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-11.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-12.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		
+						<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-25.jpeg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+						<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-15.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-16.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-17.jpg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-18.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+		<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-19.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-20.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-21.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+	
+	<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/pexels-mart-production-7706557.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/pexels-svh-manali-1801124329-28347479.jpg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+	<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-27.jpeg" alt="">
+                                <!-- <small class="position-absolute start-0 top-100 translate-middle-y bg-primary text-white rounded py-1 px-3 ms-4">$100/Night</small> -->
+                            </div>
+                          
+                        </div>
+                    </div>
+	<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-28.jpeg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+					
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-35.jpg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-33.jpg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+				<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-32.jpg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+					<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+                    <div class="room-item shadow rounded overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/Gallery/g-34.jpg" alt="">
+                            </div>
+                          
+                        </div>
+                    </div>
+					
+					
+	<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-29.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-30.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+					<!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s"> -->
+                    <!-- <div class="room-item shadow rounded overflow-hidden"> -->
+                            <!-- <div class="position-relative"> -->
+                                <!-- <img class="img-fluid" src="img/Gallery/g-31.jpeg" alt=""> -->
+                            <!-- </div> -->
+                          
+                        <!-- </div> -->
+                    <!-- </div> -->
+	
+	
+			  </div>
+            </div>
+        </div>
+		
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+		 <div class="row g-6" style="width:100%">
+		   <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Videos</h6>
+                     <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Videos</span></h1>
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;">
+                    <div>
+                        <!-- <p class="Div-Shakuntala-P" style="color: #000000 !important;">Roots &amp; Changes Gujarati Influences</p> -->
+                    </div>
+                    <br>
+                    <div>
+					<video autoplay="" loop="" controls="" width="99%" height="200px">
+					<source src="img/Gallery/v-1.mp4" type="video/mp4" >
+					</video>
+                        <!-- <iframe width="99%" height="315" src="https://www.youtube.com/embed/dygPyXgejpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
+                    </div>
+					
+                </div>
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;">
+                    <div>
+                        <!-- <p class="Div-Shakuntala-P" style="color: #000000 !important;">Roots &amp; Changes Gujarati Influences</p> -->
+                    </div>
+                    <br>
+                    <div>
+					<video autoplay="" loop="" controls="" width="99%" height="200px">
+					<source src="img/Gallery/v-2.mp4" type="video/mp4" >
+					</video>
+                        <!-- <iframe width="99%" height="315" src="https://www.youtube.com/embed/dygPyXgejpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
+                    </div>
+					
+                </div>
+			    <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;"> -->
+				
+                    <!-- <div> -->
+                        <!--  <p class="Div-Shakuntala-P" style="color: #000000 !important;">Roots &amp; Changes Gujarati Influences</p> --> -->
+                    <!-- </div> -->
+                    <!-- <br> -->
+                    <!-- <div> -->
+					<!-- <video autoplay="" loop="" controls="" width="99%" height="200px"> -->
+					<!-- <source src="img/video2.mp4" type="video/mp4" > -->
+					<!-- </video> -->
+                        <!-- <iframe width="99%" height="315" src="https://www.youtube.com/embed/dygPyXgejpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> --> 
+                    <!-- </div> -->
+					
+                <!-- </div> -->
+				
+		  </div>
+				
+            </div>
+      
+
+		 <!-- Awards-->
+         <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase"></h6>
+                    <h1 class="mb-5"> <span class="text-primary text-uppercase"></span></h1>
+                </div>
+                <div class="row g-4">
+                    <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s"> -->
+                       
+                    <!-- </div> -->
+                   
+                  
+                    <!-- <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s"> -->
+                        
+                    <!-- </div> -->
+                </div>
+            </div>
+        </div>
+	
+          <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s" style="background-color:#001b44;">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3" style="font-size:large;">ADDRESS </h1></a>
+                            <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. 
+                                KS bakers, Near KPBS Bus Stop. 
+                                Bhagya Nagar Colony, 
+                                Kukutpally, Hyderabad, 500072 
+                                +91 902-1017272 | +91 
+                                9090578963 </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h7 class="  text-uppercase mb-4" >Contact</h7><br>
+                        <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Corporate Office :-611, 2nd Cross Rd, 3rd Block, 
+Koramangala, 
+Bengaluru, 560034 
++91 8668-782878 |+91 
+9096578963 </p><br>
+						
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Sales.krolts@gmail.com </p>
+
+
+                        <p class="mb-2"><i class="fa fa-phone me-3"></i>+91 8668782878  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8010732929</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+					
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                                <h7 class="title text-start  text-uppercase mb-4">Company</h7><br>
+								<a class="btn btn-link" href="index.html">Home</a>
+                                <a class="btn btn-link" href="about.html">About Us</a>
+								<a class="btn btn-link" href="service.html">Service</a>
+								<a class="btn btn-link" href="gallery.html">Gallery</a>
+								<a class="btn btn-link" href="testimonial.html">Testimonial</a>
+                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                               
+                            </div>
+                            <div class="col-md-6">
+                                <h7 class="title text-start  text-uppercase mb-4">Services</h7>
+                                <a class="btn btn-link" href="">Installation of New Lifts 
+</a>
+                                <a class="btn btn-link" href="">Maintenance of Existing Lifts 
+</a>
+                                <a class="btn btn-link" href="">Modernization of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Repair of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Consultation for Elevator Installation 
+</a>
+								<a class="btn btn-link" href="">Earthing Material</a>
+
+                            </div>
+							
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <a class="border-bottom" href="#"></a>All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="" href="https://www.gptsoftwares.in/index.html">GPT SOFTWARE</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="./index.html">Home</a>
+                                <a href="./about.html">About</a>
+                                <a href="./contact.html">Contact</a>
+                                <a href="./gallery.html">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <a href="https://api.whatsapp.com/send/?phone=+9195959 78111&text=want+to+know+more about+us&type=phone_number&app_absent=0" class="float" target="_blank"> -->
+<!-- <i class="fa fa-whatsapp my-float"></i> -->
+<!-- </a> -->
+
+							</div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+       <a href="#" id="scroll-to-top" class="dmtop global-radius show" style="bottom: 10px;"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,1242 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<style>
+.box {
+  width: 40%;
+  margin: 0 auto;
+  background: rgba(255,255,255,0.2);
+  padding: 35px;
+  border: 2px solid #fff;
+  border-radius: 20px/50px;
+  background-clip: padding-box;
+  text-align: center;
+}
+
+.button {
+  font-size: 1em;
+  padding: 10px;
+  color: #fff;
+  border: 2px solid #06D85F;
+  border-radius: 20px/50px;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+}
+.button:hover {
+  background: #06D85F;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+  z-index: 9998;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.popup {
+  margin: 70px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+  z-index: 9998;
+}
+
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: -6px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #ff0000;
+}
+.popup .close:hover {
+  color: #06D85F;
+}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+
+@media screen and (max-width: 700px){
+  .box{
+    width: 70%;
+  }
+  .popup{
+    width: 70%;
+  }
+}
+/* General Card Styling */
+.custom-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-card img {
+    width: 100%;
+    height: 250px; /* Consistent height for all images */
+    object-fit: cover; /* Ensures proper cropping */
+}
+
+.custom-card:hover {
+    transform: scale(1.05); /* Slight zoom on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.text-center a {
+    color: #001b44;
+    text-decoration: none;
+}
+
+.text-center a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 992px) {
+    .custom-card img {
+        height: 200px; /* Smaller image for medium devices */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-card img {
+        height: auto; /* Adjust height based on content for small devices */
+    }
+}
+/* hot plix */
+
+  /* hot plix */
+
+  .navbar {
+            display: flex;
+            align-items:center;
+            background-color: #001b44;
+            padding: 5px;
+            flex-wrap: wrap;
+            justify-items: center;
+        }
+
+        .navbar-brand {
+            flex: 1;
+            text-align:center;
+            color: white;
+            font-size: 30px;
+            font-weight: bold;
+            text-decoration: none;
+            margin-right: 5rem;
+        }
+
+        .hotline-container {
+            display: flex;
+            justify-content:end;
+            gap: 5px;
+            flex: 1;
+            flex-wrap: wrap;
+        }
+
+        .hotline-box {
+            flex: 1;
+            max-width: 97px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        
+        }
+
+        .hotline-box:hover {
+            transform: scale(1.05);
+        }
+
+        .hotline-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .hotline-box p {
+            margin: 2px;
+        padding: 1px;        }
+
+        .hotline-box a {
+            color: white;
+            text-decoration: none;
+            
+        }
+
+        .hotline-box a:hover {
+            text-decoration: underline;
+        }
+
+        .social-container {
+            display: flex;
+            justify-content: space-between;
+            gap: 5px;
+            flex: 2;
+            flex-wrap: wrap;
+        }
+
+        .social-box {
+            flex: 1;
+            max-width: 150px;
+            background-color: #001b44;
+            border: 1px solid #ffffff;
+            color: white;
+            text-align: center;
+            padding: 6px;
+            font-family: Arial, sans-serif;
+            border-radius: 5px;
+            transition: transform 0.2s;
+            font-size: 11px;
+        }
+
+        .social-box:hover {
+            transform: scale(1.05);
+        }
+
+        .social-box i {
+            font-size: 14px;
+            margin-bottom: 3px;
+            display: block;
+        }
+
+        .social-box a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .social-box a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            .navbar {
+                flex-direction: column;
+            }
+
+            .hotline-container, .social-container {
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .hotline-box, .social-box {
+                max-width: 120px;
+                font-size: 10px;
+            }
+        }
+
+
+	</style>
+    <meta charset="utf-8">
+    <title>Krolts</title>
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <meta content="" name="keywords">
+    <meta content="" name="description">
+
+    <!-- Favicon -->
+    <link href="img/favicon.ico" rel="icon">
+
+    <!-- Google Web Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">  
+
+    <!-- Icon Font Stylesheet -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+    <!-- Libraries Stylesheet -->
+    <link href="lib/animate/animate.min.css" rel="stylesheet">
+    <link href="lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+    <link href="lib/tempusdominus/css/tempusdominus-bootstrap-4.min.css" rel="stylesheet" />
+
+    <!-- Customized Bootstrap Stylesheet -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Template Stylesheet -->
+    <link href="css/style.css" rel="stylesheet">
+	
+     <link rel="shortcut icon" href="img/logo.jpeg" type="image/x-icon" />
+	
+	
+	
+	
+</head>
+
+<body>
+    <div class="container-xxl bg-white p-0">
+        <!-- Spinner Start -->
+        <div id="spinner" class="show bg-white position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">
+            <div class="spinner-border text-primary" style="width: 3rem; height: 3rem;" role="status">
+                <span class="sr-only">Loading...</span>
+            </div>
+        </div>
+        <!-- Spinner End -->
+
+        <!-- Header Start -->
+        <!-- <div class="container-fluid bg-dark px-0">
+                <div class="navbar">
+                    <a href="index.html" class="navbar-brand ">KROLTS</a>
+                    <div class="hotline-container">
+                        <div class="hotline-box">
+                            <a href="tel:+918668782878">
+                                <i class="fas fa-phone-alt"></i>
+                                <p>Sales Hotline</p>
+                                <p>+91 8668782878</p>
+                            </a>
+                        </div>
+            
+                        <div class="hotline-box">
+                            <a href="tel:+918010732929">
+                                <i class="fas fa-phone-volume"></i>
+                                <p>24/7 Hotline</p>
+                                <p>+91 8010732929</p>
+                            </a>
+                        </div> -->
+            
+                        <!-- <div class="hotline-box">
+                            <a href="mailto:support@example.com">
+                                <i class="fas fa-envelope"></i>
+                                <p>Request a Callback</p>
+                                <p>Email Us</p>
+                            </a>
+                        </div>
+                        <div class="social-container">
+                            <div class="social-box">
+                                <a href="https://www.facebook.com" target="_blank">
+                                    <i class="fab fa-facebook-f"></i>
+                                    <p>Facebook</p>
+                                </a>
+                            </div>
+                            <div class="social-box">
+                                <a href="https://www.instagram.com" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                    <p>Instagram</p>
+                                </a>
+                            </div>
+                            <div class="social-box">
+                                <a href="https://www.twitter.com" target="_blank">
+                                    <i class="fab fa-twitter"></i>
+                                    <p>Twitter</p>
+                                </a>
+                            </div>
+                            <div class="social-box">
+                                <a href="https://www.linkedin.com" target="_blank">
+                                    <i class="fab fa-linkedin-in"></i>
+                                    <p>LinkedIn</p>
+                                </a>
+                            </div> -->
+                        <!-- </div>
+                    </div>
+                    </div> -->
+                    
+                    
+            
+					
+                     <!--  new nav bar -->
+        <nav class="navbar navbar-expand-lg navbar-dark p-3 p-lg-0" >
+            <!-- <h1><a href="index.html" class="navbar-brand  ">KROLTS</a></h1> -->
+            
+            <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                <span class="navbar-toggler-icon"></span>
+                
+            </button>
+            <div class="collapse navbar-collapse justify-content-center" id="navbarCollapse" style="margin-left:4rem;">
+                <!-- <h1><a href="index.html" class="navbar-brand justify-content-center">KROLTS</a></h1> -->
+                <!-- <h1><a href="index.html" class="navbar-brand m-0">KROLTS</a></h1> -->
+                <div class="navbar-nav mr-auto py-0 ">
+                    <h1 ><a href="index.html" class="navbar-brand ">KROLTS</a></h1>
+                    <a href="index.html" class="nav-item nav-link active">Home</a>
+                    <a href="about.html" class="nav-item nav-link">About Us</a>
+                    <a href="service.html" class="nav-item nav-link">Our Services</a>
+                                        <a href="projects.html" class="nav-item nav-link">Projects</a>
+
+                    <a href="gallery.html" class="nav-item nav-link">Gallery</a>
+                    <a href="client.html" class="nav-item nav-link">Clients</a>
+                    <a href="contact.html" class="nav-item nav-link">Contact</a>
+                    <!-- <a href="https://docs.google.com/forms/d/e/1FAIpQLScUuUf66y_bqq4bCBH8kwRT_mLOjIzQpoV9WWmfPmtNI4NVsw/viewform?usp=header" class="nav-item nav-link">Request Call Back</a> -->
+                   
+                </div>
+                <div class="hotline-box d-flex text-center ">
+                    <div>
+                    <a href="tel:+918668782878">
+                        <i class="fas fa-phone-alt"></i>
+                        <p>Sales Hotline</p>
+                        <p>+91 8668782878</p>
+                    </a>  
+                    </div>
+                    
+            </div>
+            <div>
+                <div class="hotline-box d-flex text-center m-3" >
+                <a href="tel:+918010732929">
+                    <i class="fas fa-phone-volume"></i>
+                    <p>24/7 Hotline</p>
+                    <p>+91 8010732929</p>
+                </a>
+            </div>
+            </div>
+        </nav>
+                       <a href="index.html"> 
+                    <!-- <img src="img/Gt.png" class="img-responsive" style="padding: 0px 7px -3px 0px; height:90px;"> -->
+                       
+                    <!-- </div> -->
+				    <!-- </a> -->
+                             <!-- <a href="https://htmlcodex.com/hotel-html-template-pro" class="btn btn-primary rounded-0 py-4 px-md-5 d-none d-lg-block">Premium Version<i class="fa fa-arrow-right ms-3"></i></a> -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Header End -->
+
+
+        <!-- Carousel Start -->
+        <!-- <div class="container-fluid p-0 mb-5">
+            <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
+               <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="w-100" src="img/Slider/slider-1.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                            <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size: larger;">Introducing Lipto Service platform&nbsp;&nbsp;</h6>
+								<br>
+								<br>
+								<br>
+                                <h1 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size:25px;">Krolts, a service leader, continues to innovate and enhance the client experience.</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img class="w-100" src="img/Slider/slider-2.jpg" alt="Image">
+                        <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                           <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size: larger;">Simplify your service selection&nbsp;&nbsp;</h6>
+								<br>
+								<br>
+								<br>
+                                <h1 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size:25px;">Every building requires a unique set of services. That’s why Krolts is here to assist you select the best service plan..</h1>
+                             
+                            </div>
+                        </div>
+                    </div>
+					 <div class="carousel-item">
+                        <img class="w-100" src="img/Slider/slider-3.jpg" alt="Image">
+                                              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                           <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size: larger;">Our Innovative Products &nbsp;&nbsp;</h6>
+								<br>
+								<br>
+								<br>
+                                <h1 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size:25px;">We provide solutions for each passenger in every facility to keep them moving.</h1>
+                            </div>
+                        </div>
+                    </div>
+					 <div class="carousel-item">
+                        <img class="w-100" src="img/Slider/slider-4.jpeg" alt="Image">
+                                              <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                           <div class="p-3" style="max-width: 700px;">
+                                <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size: larger;">Our Innovative Products &nbsp;&nbsp;</h6>
+								<br>
+								<br>
+								<br>
+                                <h1 class="section-title text-white text-uppercase mb-3 animated slideInDown" style="font-size:25px;">We provide solutions for each passenger in every facility to keep them moving.</h1>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#header-carousel"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div> -->
+        <!-- Carousel End -->
+         <!-- New image slider  -->
+           <style>
+             * {
+               margin: 0;
+               padding: 0;
+               box-sizing: border-box;
+             }
+         
+             body {
+               font-family: Arial, sans-serif;
+               background-color: #f4f4f4;
+             }
+         
+             .slider-container {
+               position: relative;
+               max-width: 100%;
+               height: 500px;
+               overflow: hidden;
+               margin: 0 auto;
+             }
+         
+             .slider-track {
+               display: flex;
+               transition: transform 0.5s ease-in-out;
+             }
+         
+             .slider-item {
+               min-width: 100%;
+               height: 500px;
+               position: relative;
+             }
+         
+             .slider-item img {
+               width: 100%;
+               height: 100%;
+               object-fit: cover;
+             }
+         
+             /* .carousel-caption {
+               position: absolute;
+               bottom: 20%;
+               left: 50%;
+               transform: translateX(-50%);
+               text-align: center;
+               color: white;
+             }
+         
+             .carousel-caption h6 {
+               font-size: larger;
+               color:#f4f4f4;
+             }
+         
+             .carousel-caption h1 {
+               font-size: 25px;
+               color: #f4f4f4;
+             } */
+    
+             .carousel-caption h1 {
+    font-size: 25px; /* Adjusted font size */
+    margin: 0; /* Ensures no extra spacing */
+    padding: 10px; /* Adds internal spacing */
+    border: 2px solid white; /* Adds a visible border */
+    display: inline-block; /* Ensures the box wraps around the text */
+    box-sizing: border-box; /* Includes padding and border in width/height */
+    max-width: 100%; /* Prevents overflow */
+}
+
+
+  .carousel-caption h6,
+  .carousel-caption h1 {
+    color: white; /* Ensures all text remains white */
+    text-transform: uppercase; /* Forces uppercase text */
+    display: block; /* Ensures each text line is displayed separately */
+  }
+
+  .carousel-caption h6 {
+    font-size: larger; /* Larger font for subtitle */
+    margin-bottom: 10px;
+    width: 6000;
+  }
+
+  .carousel-caption h1 {
+    font-size: 25px; /* Custom font size for the main heading */
+    margin: 0;
+  }
+
+
+
+         
+             .arrow {
+               position: absolute;
+               top: 50%;
+               transform: translateY(-50%);
+               font-size: 24px;
+               color: white;
+               background-color: rgba(0, 0, 0, 0.5);
+               border: none;
+               cursor: pointer;
+               padding: 10px;
+               border-radius: 50%;
+               z-index: 10;
+             }
+         
+             .arrow.left {
+               left: 10px;
+             }
+         
+             .arrow.right {
+               right: 10px;
+             }
+         
+             .dots-container {
+               position: absolute;
+               bottom: 10px;
+               left: 50%;
+               transform: translateX(-50%);
+               display: flex;
+               gap: 10px;
+             }
+         
+             .dot {
+               width: 12px;
+               height: 12px;
+               background-color: #ccc;
+               border-radius: 50%;
+               cursor: pointer;
+             }
+         
+             .dot.active {
+               background-color:aqua;
+             }
+           </style>
+        
+         <body>
+         
+            <div class="slider-container">
+                <div class="slider-track">
+                  <!-- Slide 1 -->
+                  <div class="slider-item">
+                    <img src="img/Slider/slider-1.jpg" alt="Image 1">
+                    <div class="carousel-caption">
+                      <h6>Introducing Lipto Service platform&nbsp;&nbsp;</h6>
+                      <h1>Krolts, a service leader, continues to innovate and enhance the client experience.</h1>
+                    </div>
+                  </div>
+                  <!-- Slide 2 -->
+                  <div class="slider-item">
+                    <img src="img/Slider/slider-2.jpg" alt="Image 2">
+                    <div class="carousel-caption">
+                      <h6>Simplify your service selection&nbsp;&nbsp;</h6>
+                      <h1>Every building requires a unique set of services. That’s why Krolts is here to assist you select the best service plan.</h1>
+                    </div>
+                  </div>
+                  <!-- Slide 3 -->
+                  <div class="slider-item">
+                    <img src="img/Slider/slider-3.jpg" alt="Image 3">
+                    <div class="carousel-caption">
+                      <h6>Our Innovative Products&nbsp;&nbsp;</h6>
+                      <h1>We provide solutions for each passenger in every facility to keep them moving.</h1>
+                    </div>
+                  </div>
+                  <!-- Slide 4 -->
+                  <div class="slider-item">
+                    <img src="img/Slider/slider-4.jpeg" alt="Image 4">
+                    <div class="carousel-caption">
+                      <h6>Our Innovative Products&nbsp;&nbsp;</h6>
+                      <h1>We provide solutions for each passenger in every facility to keep them moving.</h1>
+                    </div>
+                  </div>
+                </div>
+              
+                <!-- Dots -->
+                <div class="dots-container">
+                  <div class="dot active"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                  <div class="dot"></div>
+                </div>
+              </div>
+              
+              <script>
+                const track = document.querySelector('.slider-track');
+                const slides = Array.from(track.children);
+                const dots = document.querySelectorAll('.dot');
+                const slideWidth = slides[0].getBoundingClientRect().width;
+              
+                let currentIndex = 0;
+                const slideIntervalTime = 5000; // Time in milliseconds for each slide
+                let autoSlideInterval;
+              
+                // Update Slide Position
+                const moveToSlide = (index) => {
+                  track.style.transform = `translateX(-${index * slideWidth}px)`;
+                  updateDots(index);
+                };
+              
+                // Update Dots
+                const updateDots = (index) => {
+                  dots.forEach((dot, i) => {
+                    dot.classList.toggle('active', i === index);
+                  });
+                };
+              
+                // Automatic Slide Transition
+                const startAutoSlide = () => {
+                  autoSlideInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slides.length;
+                    moveToSlide(currentIndex);
+                  }, slideIntervalTime);
+                };
+              
+                // Reset Auto Slide
+                const resetAutoSlide = () => {
+                  clearInterval(autoSlideInterval);
+                  startAutoSlide();
+                };
+              
+                // Dot Navigation
+                dots.forEach((dot, index) => {
+                  dot.addEventListener('click', () => {
+                    currentIndex = index;
+                    moveToSlide(currentIndex);
+                    resetAutoSlide();
+                  });
+                });
+              
+                // Initialize Automatic Slider
+                startAutoSlide();
+              </script>
+              
+          
+         
+         </body>
+         </html>
+         
+         
+         
+
+        <!-- end caursal -->
+        <!-- About Start -->
+		<div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                    <div class="col-lg-6">
+                        <!-- <h6 class="section-title text-start text-primary text-uppercase">About Us</h6> -->
+                      <h1 class="mb-4" style="font-size:x-large;">Welcome to <span class="text-primary text-uppercase">Krolts</span></h1>
+						  <h6 class="section-title text-start text-primary text-uppercase">Who we are</h6>
+                       <p class="mb-4" style="text-align:justify;">The world is always evolving. Like time itself, technology also moves forward 
+and needs upgrades. Krolts India Elevators & Escalators is committed to 
+providing the latest and state-of-the-art lift and escalator installation and 
+modernization services that are both safe and reliable. With a vast 
+experience of 16 years in the lifts and elevators industry, we give utmost 
+importance to the safety measures in our services.</p>
+							  <p class="mb-4" style="text-align:justify;">Based in Pune, Maharashtra, Krolts Elevators & escalators has gained a global 
+reputation in the industry with our commitment to excellence and security. We 
+have a team of highly trained and experienced engineers, technicians and 
+professionals who can assist you with all types of lift and escalator installation 
+services. Be it a residential or commercial property, our vertical mobility solutions 
+are designed to be robust and durable to give our clients the ultimate safety and 
+accessibility. We can guide you with the consultation, design, manufacturing, and 
+installation process of the lifts and escalators.</p>
+						  <!-- <h6 class="section-title text-start text-primary text-uppercase">What We Do</h6> -->
+
+					     <!-- <ul class="service-ul"> -->
+						<!-- <li>Solar roof-top Systems.</li> -->
+						<!-- <li>Solar PV Panel.</li> -->
+						<!-- <li>Solar Grid Tie Inverter</li> -->
+						<!-- <li>Solar Module Mounting Structure</li> -->
+						<!-- <li>Solar Water Heater</li> -->
+						<!-- <li>Earthing Material</li> -->
+						
+						<!-- <li>Solar Street Light.</li> -->
+						<!-- <li>Solar Home Lighting Systems.</li> -->
+						<!-- <li>Solar PCU.</li> -->
+						<!-- <li>Solar Installation Service.</li> -->
+						
+						<!-- <li>Solar Cooker.</li> -->
+						<!-- <li>Solar Power System.</li> -->
+						<!-- <li>Solar Petrol Pump.</li> -->
+						<!-- <li>Solar Cooker.</li> -->
+						<!-- <li>Solar Off-Grid System.</li> -->
+						
+						
+						<!-- </ul> -->
+                       
+                        <div class="row g-3 pb-4">
+                         
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.3s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">50</h2>
+                                        <p class="mb-0">Staffs</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="border rounded p-1">
+                                    <div class="border rounded text-center p-4">
+                                        <i class="fa fa-users fa-2x text-primary mb-2"></i>
+                                        <h2 class="mb-1" data-toggle="counter-up">136</h2>
+                                        <p class="mb-0">Core Team</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <a class="btn btn-primary py-3 px-5 mt-2" href="contact.html">Contact Us</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/About/1.jpeg" style="margin-top: 25%;"> -->
+                            </div>
+                            <div class="col-12 text-start">
+							<video autoplay="" loop="" controls="" width="99%" height="200px">
+					<source src="img/a-1.mp4" type="video/mp4">
+					</video>
+                                <!-- <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/a-1.mp4"> -->
+                            </div>
+                            <!-- <div class="col-6 text-end"> -->
+                                <!-- <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/SUKNYA BESAN  FINAL CDR-1.jpg"> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-6 text-start"> -->
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/333 (2).jpg"> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+     
+
+        <!-- Video Start -->
+        <div class="container-xxl py-5 px-0 wow zoomIn" data-wow-delay="0.1s">
+            <div class="row g-0">
+                <div class="col-md-6 d-flex align-items-center" style="background-color: #001b44;">
+                    <div class="p-5">
+                        <!-- <h6 class="section-title text-start text-white text-uppercase mb-3">Our Story</h6> -->
+                        <h1 class="text-white mb-4">Established. 2014</h1>
+                        <p class="text-white mb-4" style="text-align:justify;">
+                            Krolts India Pvt Ltd relies on a team of skilled 
+                            engineers and expert technicians to provide 
+                            safe and reliable installation and maintenance 
+                            services for lifts and elevators.
+                        </p>
+                        <!-- <a href="" class="btn btn-primary py-md-3 px-md-5 me-3">Our Rooms</a>
+                        <a href="" class="btn btn-light py-md-3 px-md-5">Book A Room</a> -->
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="">
+                        <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/pexels-cup-of-couple-6956892.jpg" 
+                            style="visibility: visible; animation-delay: 0.3s; animation-name: zoomIn;">
+                        <!-- <button type="button" class="btn-play" data-bs-toggle="modal" data-src="https://www.youtube.com/embed/pLTAc2HyXCM" 
+                            data-bs-target="#videoModal">
+                            <span></span>
+                        </button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="modal fade" id="videoModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content rounded-0">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Youtube Video</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- 16:9 aspect ratio -->
+                        <div class="ratio ratio-16x9">
+                            <iframe class="embed-responsive-item" src="" id="video" allowfullscreen allowscriptaccess="always"
+                                allow="autoplay"></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Video Start -->
+
+
+
+		<!-- service Start -->
+        <div class="container-xxl py-5">
+            <div class="container">
+                <div class="row g-5 align-items-center">
+                 <div class="col-lg-6">
+				 
+                        <!-- <h6 class="text-start text-primary text-uppercase">Our Services :</h6> -->
+                        <h1 class="mb-4">Explore <span class="text-primary text-uppercase"> Our Services</span></h1>
+						  <h6 class="text-start text-primary text-uppercase">Our Core Values :</h6>
+                        <p class="mb-	4" style="text-align:justify;">People are at the heart of all we do.
+We are dependable, astute, and forward-looking.
+We are making it more distinctive and worldwide.
+We put on our work boots to finish it.
+ .
+</p>
+
+
+ <h6 class=" text-start text-primary text-uppercase">Our Mission:</h6>
+                        <p class="mb-4" style="text-align:justify;">To become a world-class, customers-focused, service-oriented company .</p>
+
+ <h6 class=" text-start text-primary text-uppercase" style="text-align:justify;">Our Vision:</h6>
+                        <p class="mb-4">We give people choice to select their interest, benefits, to experience world services and products. 
+</p>
+
+
+ <h6 class=" text-start text-primary text-uppercase">Why Krolts</h6>
+						<ul class="service-ul">
+						<li>Installation of New lifts.</li>
+						<li>Maintenance of Existing Lifts</li>
+						<li>Modernization of Lifts .</li>
+						<li>Repair of Lifts .</li>
+						<li>Consultation for Elevator Installation .</li>
+						
+						</ul>
+
+						
+						
+                        <div class="row g-3 pb-4">
+                           
+                           
+                        </div>
+                        <!-- <a class="btn btn-primary py-3 px-5 mt-2" href="">Explore More</a> -->
+                    </div>
+					  <div class="col-lg-6">
+                        <div class="row g-3">
+                            <div class="col-6 text-end">
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.1s" src="img/About/1.jpeg" style="margin-top: 25%;"> -->
+                            </div>
+                            <div class="col-12	 text-start">
+                                <img class="img-fluid rounded w-100 wow zoomIn" data-wow-delay="0.3s" src="img/Gallery/g-2.jpg">
+                            </div>
+                            <!-- <div class="col-6 text-end"> -->
+                                <!-- <img class="img-fluid rounded w-50 wow zoomIn" data-wow-delay="0.5s" src="img/SUKNYA BESAN  FINAL CDR-1.jpg"> -->
+                            <!-- </div> -->
+                            <!-- <div class="col-6 text-start"> -->
+                                <!-- <img class="img-fluid rounded w-75 wow zoomIn" data-wow-delay="0.7s" src="img/333 (2).jpg"> -->
+                            <!-- </div> -->
+                        </div>
+                    </div>
+			     <div class="col-lg-6 infranborder1">
+                        <!-- <h6 class="section-title text-start text-primary text-uppercase">Our Services</h6> -->
+                        <!-- <h1 class="mb-4">Explore <span class="text-primary text-uppercase"> Our Services</span></h1> -->						
+						
+					
+        
+						
+                        <div class="row g-3 pb-4">
+                           
+                          
+							
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+        <!-- Sevice End -->
+
+
+      
+       
+	 	<!-- Team Start -->
+         <div class="container-xxl py-5">
+            <div class="container">
+                <div class="text-center wow fadeInUp" data-wow-delay="0.1s">
+                    <h6 class="section-title text-center text-primary text-uppercase">Our Portfolio</h6>
+                    <h1 class="mb-5 text-primary">Our Products Range</h1>
+                </div>
+                <div class="row g-4">
+                    <!-- Card 1 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/passanger.webp" alt="Passenger Elevator">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup2" class="fw-bold" style="font-size:larger;">Passenger Elevator</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/hospital.jpg" alt="Hospital Elevators">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup3" class="fw-bold" style="font-size:larger;">Hospital Elevators</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/panoramic.jpg" alt="Panoramic Elevators">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup4" class="fw-bold" style="font-size:larger;">Panoramic Elevators</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 4 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/car.jpg" alt="Car Elevators">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup7" class="fw-bold" style="font-size:larger;">Car Elevators</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 5 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/dumb.webp" alt="Dumb Waiters">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup10" class="fw-bold" style="font-size:larger;">Dumb Waiters</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 6 -->
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/home.jpg" alt="Home/Hydraulic Elevators">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup1" class="fw-bold" style="font-size:larger;">Home/Hydraulic Elevators</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-4 col-md-6 col-sm-12">
+                        <div class="custom-card">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/product/freight.jpg" alt="Freight / Goods Elevators">
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <a href="#popup5" class="fw-bold" style="font-size:larger;">Freight / Goods Elevators</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        
+        <!-- Team End -->
+
+		<!-- Video1 Start -->
+		<!-- <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12"> -->
+		 <!-- <div class="row g-6" style="width:100%"> -->
+		   <!-- <div class="text-center wow fadeInUp" data-wow-delay="0.1s"> -->
+                    <!-- <h6 class="section-title text-center text-primary text-uppercase">Videos</h6> -->
+                     <!-- <h1 class="mb-5">Explore Our <span class="text-primary text-uppercase">Videos</span></h1> -->
+                <!-- </div> -->
+                <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;"> -->
+                    <!-- <div> -->
+                    <!-- </div> -->
+                    <!-- <br> -->
+                    <!-- <div> -->
+					<!-- <video autoplay="" loop="" controls="" width="99%" height="200px"> -->
+					<!-- <source src="img/video4.mp4" type="video/mp4" > -->
+					<!-- </video> -->
+                    <!-- </div> -->
+					
+                <!-- </div> -->
+                <!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;"> -->
+                    <!-- <div> -->
+                        <!-- <p class="Div-Shakuntala-P" style="color: #000000 !important;">Roots &amp; Changes Gujarati Influences</p> -->
+                    <!-- </div> -->
+                    <!-- <br> -->
+                    <!-- <div> -->
+					<!-- <video autoplay="" loop="" controls="" width="99%" height="200px"> -->
+					<!-- <source src="img/video3.mp4" type="video/mp4" > -->
+					<!-- </video> -->
+                        <!--  <iframe width="99%" height="315" src="https://www.youtube.com/embed/dygPyXgejpI" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe> -->
+                    <!-- </div> -->
+					
+                <!-- </div> -->
+				<!-- <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" style="padding: 1px 50px 0px 50px; text-align: center;"> -->
+				
+                    <!-- <div> -->
+                    <!-- </div> -->
+                    <!-- <br> -->
+                    <!-- <div> -->
+					<!-- <video autoplay="" loop="" controls="" width="99%" height="200px"> -->
+					<!-- <source src="img/video2.mp4" type="video/mp4" > -->
+					<!-- </video> -->
+                    <!-- </div> -->
+					
+                <!-- </div> -->
+				
+				
+			   
+
+		  <!-- </div> -->
+				
+            <!-- </div> -->
+	
+
+        <!-- Newsletter Start -->
+        <!-- <div class="container newsletter mt-5 wow fadeIn" data-wow-delay="0.1s"> -->
+            <!-- <div class="row justify-content-center"> -->
+                <!-- <div class="col-lg-10 border rounded p-1"> -->
+                    <!-- <div class="border rounded text-center p-1"> -->
+                        <!-- <div class="bg-white rounded text-center p-5"> -->
+						
+					
+							<!-- <form action="mailto:anil@artablishbuildcon.com" method="post" enctype="text/plain"><br> -->
+                            <!-- <h4 class="mb-4"> <span class="text-primary text-uppercase">Email Us </span></h4> -->
+                            <!-- <div class="position-relative mx-auto" style="max-width: 400px;">  -->
+                                <!-- <input class="form-control w-100 py-3 ps-4 pe-5" type="text" placeholder="Enter your email " name="email"> -->
+								 <!-- <input class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" type="submit" value="Submit"> -->
+                                <!--  <button type="button" class="btn btn-primary py-2 px-3 position-absolute top-0 end-0 mt-2 me-2" type="submit" value="send">Submit</button> -->
+                            <!-- </div> -->
+							<!-- </form>  -->
+                        <!-- </div> -->
+                    <!-- </div> -->
+                <!-- </div> -->
+            <!-- </div> -->
+        <!-- </div> -->
+        <!-- Newsletter Start -->
+        
+
+        <!-- Footer Start -->
+        <div class="container-fluid text-light footer wow fadeIn" data-wow-delay="0.1s" style="background-color:#001b44">
+            <div class="container pb-5">
+                <div class="row g-5">
+                    <div class="col-md-6 col-lg-4">
+                        <div class="rounded p-4">
+                            <a href="index.html"><h1 class="text-white text-uppercase mb-3" style="font-size:large;">ADDRESS </h1></a>
+                            <!-- <p class="text-white mb-0" style="text-align:justify;">We believe it is our core values that has made us a reputable name in the industry 
+and among our clients. For any project that comes, all our operations fall in line with 
+the below principles.
+							<a class="text-dark fw-medium" href="index.html"></a>.
+							</p>
+                            <br> -->
+                            <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. KS bakers, Near KPBS Bus Stop.<br> Bhagya Nagar Colony, Kukutpally, Hyderabad, 500072 </p>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <h6 class=" text-start  text-uppercase mb-4" style="color:white;">Contact</h6>
+                        <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Corporate Office :-611, 2nd Cross Rd, 3rd Block, Koramangala, Bengaluru, 560034 </p><br>
+						<!-- <p class="mb-2"><i class="fa fa-map-marker me-3"></i>Branch address :- Padmaja Jhanshi Enclave, opp. KS bakers, Near KPBS Bus Stop. Bhagya Nagar Colony, Kukutpally, Hyderabad, 500072 </p><br> -->
+                        <p class="mb-2"><i class="fa fa-envelope me-3"></i>Sales.krolts@gmail.com </p>
+
+
+                        <p class="mb-2"><i class="fa fa-phone me-3"></i>+91 8668782878  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;8010732929</p>
+                        <div class="d-flex pt-2">
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-twitter"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-facebook-f"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-youtube"></i></a>
+                            <a class="btn btn-outline-light btn-social" href=""><i class="fab fa-linkedin-in"></i></a>
+                        </div>
+                    </div>
+					
+                    <div class="col-lg-5 col-md-12">
+                        <div class="row gy-5 g-4">
+                            <div class="col-md-6">
+                        <h6 class=" text-start  text-uppercase mb-4" style="color:white;">Company</h6>
+								<a class="btn btn-link" href="index.html">Home</a>
+                                <a class="btn btn-link" href="about.html">About Us</a>
+								<a class="btn btn-link" href="service.html">Service</a>
+								<a class="btn btn-link" href="gallery.html">Gallery</a>
+								<a class="btn btn-link" href="testimonial.html">Testimonial</a>
+                                <a class="btn btn-link" href="contact.html">Contact Us</a>
+                               
+                            </div>
+                            <div class="col-md-6">
+                        <h6 class=" text-start  text-uppercase mb-4" style="color:white;">Services</h6>
+                                <a class="btn btn-link" href="">Installation of New Lifts 
+</a>
+                                <a class="btn btn-link" href="">Maintenance of Existing Lifts 
+</a>
+                                <a class="btn btn-link" href="">Modernization of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Repair of Lifts 
+</a>
+                                <a class="btn btn-link" href="">Consultation for Elevator Installation 
+</a>
+								<a class="btn btn-link" href="">Earthing Material</a>
+
+                            </div>
+							
+                        </div>
+                    </div>
+					
+                </div>
+            </div>
+            <div class="container">
+                <div class="copyright">
+                    <div class="row">
+                        <div class="col-md-6 text-center text-md-start mb-3 mb-md-0">
+                            <a class="border-bottom" href="#"></a>All Right Reserved. 
+							
+							<!--/*** This template is free as long as you keep the footer author’s credit link/attribution link/backlink. If you'd like to use the template without the footer author’s credit link/attribution link/backlink, you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". Thank you for your support. ***/-->
+							Designed By <a class="" href="https://www.gptsoftwares.in/index.html">GPT SOFTWARE</a>
+                        </div>
+                        <div class="col-md-6 text-center text-md-end">
+                            <div class="footer-menu">
+                                <a href="./index.html">Home</a>
+                                <a href="./about.html">About</a>
+                                <a href="./contact.html">Contact</a>
+                                <a href="./gallery.html">Gallery</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+			
+        </div>
+		 <div class="footer-column col-lg-7 col-md-6 col-sm-12">
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<!-- <a href="https://api.whatsapp.com/send/?phone=+9195959 78111&text=want+to+know+more about+us&type=phone_number&app_absent=0" class="float" target="_blank"> -->
+<!-- <i class="fa fa-whatsapp my-float"></i> -->
+<!-- </a> -->
+
+							</div>
+        <!-- Footer End -->
+
+
+        <!-- Back to Top -->
+       <a href="#" id="scroll-to-top" class="dmtop global-radius show" style="bottom: 10px;"><i class="fa fa-angle-up"></i></a>
+    </div>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/tempusdominus/js/moment.min.js"></script>
+    <script src="lib/tempusdominus/js/moment-timezone.min.js"></script>
+    <script src="lib/tempusdominus/js/tempusdominus-bootstrap-4.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+</body>
+
+</html>
